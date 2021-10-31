@@ -44,7 +44,8 @@ import com.example.android.architecture.blueprints.todoapp.util.EspressoIdlingRe
 import com.example.android.architecture.blueprints.todoapp.util.deleteAllTasksBlocking
 import com.example.android.architecture.blueprints.todoapp.util.monitorActivity
 import com.example.android.architecture.blueprints.todoapp.util.saveTaskBlocking
-import org.hamcrest.Matchers.allOf
+import org.hamcrest.CoreMatchers.allOf
+//import org.hamcrest.Matchers.allOf
 import org.hamcrest.core.IsNot.not
 import org.junit.After
 import org.junit.Before
