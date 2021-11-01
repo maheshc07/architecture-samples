@@ -21,7 +21,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
-public class TaskFragmentTest {
+public class TasksTest {
 
     public ActivityScenario<TasksActivity> scenario;
 
@@ -46,15 +46,6 @@ public class TaskFragmentTest {
         scenario = ActivityScenario.launch(TasksActivity.class);
         onView(withId(R.id.complete_checkbox)).perform(click());
         onView(withId(R.id.complete_checkbox)).check(matches(isChecked()));
-    }
-
-    @Test
-    public void verifyActiveTaskAndCompleteTaskInStatistics() {
-        scenario = ActivityScenario.launch(TasksActivity.class);
-        onView(withId(R.id.drawer_layout)).perform(click());
-        onView(withText(AccessibilityIdentifiers.STATISTICS)).perform(click());
-        onView(withText(AccessibilityIdentifiers.ACTIVETASK50)).check(matches(isDisplayed()));
-        onView(withText(AccessibilityIdentifiers.COMPLETEDTASK50)).check(matches(isDisplayed()));
     }
 
     @Test
